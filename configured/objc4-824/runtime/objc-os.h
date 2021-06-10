@@ -146,7 +146,7 @@ static inline uintptr_t mask16ShiftBits(uint16_t mask)
 #   include <os/lock_private.h>
 #   include <libkern/OSAtomic.h>
 #   include <libkern/OSCacheControl.h>
-#   include <System/pthread_machdep.h>
+//#   include <System/pthread_machdep.h>
 #   include "objc-probes.h"  // generated dtrace probe definitions.
 
 // Some libc functions call objc_msgSend() 
