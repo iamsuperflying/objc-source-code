@@ -247,7 +247,7 @@ ClearExclusive(uintptr_t *dst __unused)
 
 
 #if !TARGET_OS_IPHONE
-#   include <CrashReporterClient.h>
+//#   include <CrashReporterClient.h>
 #else
     // CrashReporterClient not yet available on iOS
     __BEGIN_DECLS
