@@ -332,6 +332,21 @@
 		D2AAC0630554660B00DB518D /* libobjc.A.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libobjc.A.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9463C02671C1A3006A816F /* lpf-objc-debug */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "lpf-objc-debug"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9463C22671C1A3006A816F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DC9463C72671DBBB006A816F /* _simple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _simple.h; sourceTree = "<group>"; };
+		DC9463C92671DBBB006A816F /* lock_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lock_private.h; sourceTree = "<group>"; };
+		DC9463CA2671DBBB006A816F /* tsd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tsd.h; sourceTree = "<group>"; };
+		DC9463CB2671DBBB006A816F /* base_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = base_private.h; sourceTree = "<group>"; };
+		DC9463CC2671DBBB006A816F /* variant_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = variant_private.h; sourceTree = "<group>"; };
+		DC9463CD2671DBBB006A816F /* reason_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reason_private.h; sourceTree = "<group>"; };
+		DC9463CE2671DBBB006A816F /* linker_set.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = linker_set.h; sourceTree = "<group>"; };
+		DC9463D02671DBBB006A816F /* restartable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = restartable.h; sourceTree = "<group>"; };
+		DC9463D22671DBBB006A816F /* spinlock_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = spinlock_private.h; sourceTree = "<group>"; };
+		DC9463D32671DBBB006A816F /* tsd_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tsd_private.h; sourceTree = "<group>"; };
+		DC9463D52671DBBB006A816F /* reason.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reason.h; sourceTree = "<group>"; };
+		DC9463D62671DBBB006A816F /* objc-shared-cache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-shared-cache.h"; sourceTree = "<group>"; };
+		DC9463D82671DBBB006A816F /* dyld_priv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dyld_priv.h; sourceTree = "<group>"; };
+		DC9463DB2671DBBC006A816F /* cpu_capabilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cpu_capabilities.h; sourceTree = "<group>"; };
+		DC9463DC2671DBBC006A816F /* Block_private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Block_private.h; sourceTree = "<group>"; };
 		E8923D9C116AB2820071B552 /* objc-blocktramps-i386.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "objc-blocktramps-i386.s"; path = "runtime/objc-blocktramps-i386.s"; sourceTree = "<group>"; };
 		E8923D9D116AB2820071B552 /* objc-blocktramps-x86_64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = "objc-blocktramps-x86_64.s"; path = "runtime/objc-blocktramps-x86_64.s"; sourceTree = "<group>"; };
 		E8923DA0116AB2820071B552 /* objc-block-trampolines.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "objc-block-trampolines.mm"; path = "runtime/objc-block-trampolines.mm"; sourceTree = "<group>"; };
@@ -583,6 +598,15 @@
 		DC94638B2671A961006A816F /* support-headers */ = {
 			isa = PBXGroup;
 			children = (
+				DC9463C72671DBBB006A816F /* _simple.h */,
+				DC9463DC2671DBBC006A816F /* Block_private.h */,
+				DC9463CF2671DBBB006A816F /* kern */,
+				DC9463D72671DBBB006A816F /* mach-o */,
+				DC9463D62671DBBB006A816F /* objc-shared-cache.h */,
+				DC9463C82671DBBB006A816F /* os */,
+				DC9463D12671DBBB006A816F /* pthread */,
+				DC9463D42671DBBB006A816F /* sys */,
+				DC9463D92671DBBC006A816F /* System */,
 			);
 			path = "support-headers";
 			sourceTree = "<group>";
@@ -593,6 +617,68 @@
 				DC9463C22671C1A3006A816F /* main.m */,
 			);
 			path = "lpf-objc-debug";
+			sourceTree = "<group>";
+		};
+		DC9463C82671DBBB006A816F /* os */ = {
+			isa = PBXGroup;
+			children = (
+				DC9463C92671DBBB006A816F /* lock_private.h */,
+				DC9463CA2671DBBB006A816F /* tsd.h */,
+				DC9463CB2671DBBB006A816F /* base_private.h */,
+				DC9463CC2671DBBB006A816F /* variant_private.h */,
+				DC9463CD2671DBBB006A816F /* reason_private.h */,
+				DC9463CE2671DBBB006A816F /* linker_set.h */,
+			);
+			path = os;
+			sourceTree = "<group>";
+		};
+		DC9463CF2671DBBB006A816F /* kern */ = {
+			isa = PBXGroup;
+			children = (
+				DC9463D02671DBBB006A816F /* restartable.h */,
+			);
+			path = kern;
+			sourceTree = "<group>";
+		};
+		DC9463D12671DBBB006A816F /* pthread */ = {
+			isa = PBXGroup;
+			children = (
+				DC9463D22671DBBB006A816F /* spinlock_private.h */,
+				DC9463D32671DBBB006A816F /* tsd_private.h */,
+			);
+			path = pthread;
+			sourceTree = "<group>";
+		};
+		DC9463D42671DBBB006A816F /* sys */ = {
+			isa = PBXGroup;
+			children = (
+				DC9463D52671DBBB006A816F /* reason.h */,
+			);
+			path = sys;
+			sourceTree = "<group>";
+		};
+		DC9463D72671DBBB006A816F /* mach-o */ = {
+			isa = PBXGroup;
+			children = (
+				DC9463D82671DBBB006A816F /* dyld_priv.h */,
+			);
+			path = "mach-o";
+			sourceTree = "<group>";
+		};
+		DC9463D92671DBBC006A816F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				DC9463DA2671DBBC006A816F /* machine */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		DC9463DA2671DBBC006A816F /* machine */ = {
+			isa = PBXGroup;
+			children = (
+				DC9463DB2671DBBC006A816F /* cpu_capabilities.h */,
+			);
+			path = machine;
 			sourceTree = "<group>";
 		};
 		E9AD465824925261002AF1DB /* check-preopt-caches */ = {
