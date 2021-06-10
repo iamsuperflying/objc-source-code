@@ -214,7 +214,7 @@ os_variant_uses_ephemeral_storage(const char *subsystem);
  * @result
  * Returns true if this variant is BaseSystem
  */
-API_AVAILABLE(macosx(10.16)) API_UNAVAILABLE(ios, tvos, watchos, bridgeos)
+API_AVAILABLE(macosx(10.16)) API_UNAVAILABLE(ios, tvos, watchos)
 OS_EXPORT OS_WARN_RESULT
 bool
 os_variant_is_basesystem(const char *subsystem);
@@ -240,7 +240,7 @@ os_variant_is_basesystem(const char *subsystem);
  * @result
  * Returns true if this variant is a recoveryOS
  */
-API_AVAILABLE(macosx(10.15), ios(13.0), tvos(13.0), watchos(6.0), bridgeos(4.0))
+API_AVAILABLE(macosx(10.15), ios(13.0), tvos(13.0), watchos(6.0))
 OS_EXPORT OS_WARN_RESULT
 bool
 os_variant_is_recovery(const char *subsystem);
@@ -266,7 +266,7 @@ os_variant_is_recovery(const char *subsystem);
  * @result
  * Returns true if the system is of the specified variant.
  */
-API_AVAILABLE(macosx(10.15), ios(13.0), tvos(13.0), watchos(6.0), bridgeos(4.0))
+API_AVAILABLE(macosx(10.15), ios(13.0), tvos(13.0), watchos(6.0))
 OS_EXPORT OS_WARN_RESULT
 bool
 os_variant_check(const char *subsystem, const char *variant);
@@ -284,7 +284,7 @@ os_variant_check(const char *subsystem, const char *variant);
  * error occurs, @c NULL is returned and @c errno will be set to indicate the
  * error.
  */
-API_AVAILABLE(macosx(10.16), ios(14.0), tvos(13.0), watchos(7.0), bridgeos(4.0))
+API_AVAILABLE(macosx(10.16), ios(14.0), tvos(13.0), watchos(7.0))
 OS_EXPORT OS_WARN_RESULT
 char *
 os_variant_copy_description(const char *subsystem);
