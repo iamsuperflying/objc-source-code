@@ -214,7 +214,7 @@ os_variant_uses_ephemeral_storage(const char *subsystem);
  * @result
  * Returns true if this variant is BaseSystem
  */
-API_AVAILABLE(macosx(10.16)) API_UNAVAILABLE(ios, tvos, watchos, bridgeos)
+API_AVAILABLE(macosx(10.16)) API_UNAVAILABLE(ios, tvos, watchos)
 OS_EXPORT OS_WARN_RESULT
 bool
 os_variant_is_basesystem(const char *subsystem);
